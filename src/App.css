@@ -1,0 +1,489 @@
+#root {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+#root>.back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  z-index: 100;
+  transition: .5s;
+}
+
+#root>.back-ZIndex {
+  z-index: 10000;
+}
+
+#root>.back>span {
+  position: absolute;
+  color: white;
+  font-size: 10rem;
+  letter-spacing: 5px;
+  font-weight: 900;
+  display: inline-block;
+  width: 50%;
+  transition: 1s;
+}
+
+#root>.back>.givin-1 {
+  left: 0%;
+  top: 0;
+  text-align: right;
+}
+
+#root>.back>.givin-2 {
+  left: 50%;
+  bottom: 0;
+  text-align: left;
+}
+
+#root>.back>div {
+  width: 100%;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  transition: 4s;
+  z-index: -1;
+}
+
+#root>.back>div:nth-child(1) {
+  animation-name: div-1;
+}
+
+#root>.back>div:nth-child(2) {
+  animation-name: div-2;
+}
+
+#root>.back>div:nth-child(3) {
+  animation-name: div-3;
+}
+
+#root>.back>div:nth-child(4) {
+  animation-name: div-4;
+}
+
+#root>.back>div:nth-child(5) {
+  animation-name: div-5;
+}
+
+#root>.back>div:nth-child(6) {
+  animation-name: div-6;
+}
+
+#root>.back>div:nth-child(7) {
+  animation-name: div-7;
+}
+
+#root>.back>div:nth-child(8) {
+  animation-name: div-8;
+}
+
+#root>.back>div:nth-child(9) {
+  animation-name: div-9;
+}
+
+#root>.back>div:nth-child(10) {
+  animation-name: div-10;
+}
+
+#root>.back>div:nth-child(11) {
+  animation-name: div-11;
+}
+
+#root>.back>div:nth-child(12) {
+  animation-name: div-12;
+}
+
+#root>.back>div:nth-child(13) {
+  animation-name: div-13;
+}
+
+#root>.back>div:nth-child(14) {
+  animation-name: div-14;
+}
+
+#root>.back>div:nth-child(15) {
+  animation-name: div-15;
+}
+
+#root>.back>div:nth-child(16) {
+  animation-name: div-16;
+}
+
+#root>.back>div:nth-child(17) {
+  animation-name: div-17;
+}
+
+#root>.back>div:nth-child(18) {
+  animation-name: div-18;
+}
+
+
+
+@keyframes div-1 {
+  from {
+    background-color: rgb(92, 25, 174);
+  }
+
+  to {
+    background-color: rgb(30, 3, 62);
+  }
+}
+
+@keyframes div-2 {
+  from {
+    background-color: rgb(99, 39, 172);
+  }
+
+  to {
+    background-color: rgb(49, 15, 92);
+  }
+}
+
+@keyframes div-3 {
+  from {
+    background-color: rgb(134, 54, 231);
+  }
+
+  to {
+    background-color: rgb(83, 15, 166);
+  }
+}
+
+@keyframes div-4 {
+  from {
+    background-color: rgb(103, 96, 243);
+  }
+
+  to {
+    background-color: rgb(28, 6, 154);
+  }
+}
+
+@keyframes div-5 {
+  from {
+    background-color: rgb(15, 50, 127);
+  }
+
+  to {
+    background-color: rgb(60, 8, 124);
+  }
+}
+
+@keyframes div-6 {
+  from {
+    background-color: rgb(25, 82, 174);
+  }
+
+  to {
+    background-color: rgb(33, 12, 151);
+  }
+}
+
+@keyframes div-7 {
+  from {
+    background-color: rgb(30, 43, 178);
+  }
+
+  to {
+    background-color: rgb(11, 11, 213);
+  }
+}
+
+@keyframes div-8 {
+  from {
+    background-color: rgb(22, 86, 143);
+  }
+
+  to {
+    background-color: rgb(21, 55, 168);
+  }
+}
+
+@keyframes div-9 {
+  from {
+    background-color: rgb(36, 69, 215);
+  }
+
+  to {
+    background-color: rgb(28, 13, 145);
+  }
+}
+
+@keyframes div-10 {
+  from {
+    background-color: rgb(25, 47, 174);
+  }
+
+  to {
+    background-color: rgb(25, 22, 114);
+  }
+}
+
+@keyframes div-11 {
+  from {
+    background-color: rgb(92, 25, 174);
+  }
+
+  to {
+    background-color: rgb(46, 19, 143);
+  }
+}
+
+@keyframes div-12 {
+  from {
+    background-color: rgb(44, 23, 113);
+  }
+
+  to {
+    background-color: rgb(34, 9, 118);
+  }
+}
+
+@keyframes div-13 {
+  from {
+    background-color: rgb(92, 25, 174);
+  }
+
+  to {
+    background-color: rgb(36, 18, 84);
+  }
+}
+
+@keyframes div-14 {
+  from {
+    background-color: rgb(41, 11, 77);
+  }
+
+  to {
+    background-color: rgb(61, 30, 155);
+  }
+}
+
+@keyframes div-15 {
+  from {
+    background-color: rgb(92, 25, 174);
+  }
+
+  to {
+    background-color: rgb(47, 11, 92);
+  }
+}
+
+@keyframes div-16 {
+  from {
+    background-color: rgb(80, 20, 153);
+  }
+
+  to {
+    background-color: rgb(30, 3, 62);
+  }
+}
+
+@keyframes div-17 {
+  from {
+    background-color: rgb(75, 37, 121);
+  }
+
+  to {
+    background-color: rgb(49, 16, 89);
+  }
+}
+
+@keyframes div-18 {
+  from {
+    background-color: rgb(92, 25, 174);
+  }
+
+  to {
+    background-color: rgb(30, 3, 62);
+  }
+}
+
+
+#root>.main {
+  display: flex;
+  gap: 25px;
+  width: 85%;
+  height: 490px;
+  padding: 20px;
+  z-index: 1000;
+}
+
+#root>.main>.scoreboard {
+  width: 62%;
+  position: relative;
+  width: 100%;
+}
+
+#root>.main>.scoreboard>div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: rgb(92, 25, 174);
+  border-radius: 5px 0 0 5px;
+  position: relative;
+  transition: 1s;
+  position: absolute;
+  width: 48%;
+}
+
+#root>.main>.scoreboard>div>.before-element {
+  position: absolute;
+  top: 0;
+  left: 80px;
+  width: 0px;
+  height: 100%;
+  background-image: linear-gradient(to right, rgb(92, 25, 174), rgb(42, 145, 235), rgba(92, 25, 174, 0));
+  z-index: 1;
+  transition: 1.5s;
+}
+
+#root>.main>.scoreboard>div>.points-12 {
+  background-image: linear-gradient(to right, rgb(92, 25, 174), yellow, rgba(92, 25, 174, 0));
+  transition: 1.5s;
+}
+
+#root>.main>.scoreboard>div>.points-12::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0px;
+  color: white;
+  font-weight: 900;
+  height: 100%;
+  line-height: 45px;
+  width: 120px;
+  text-align: center;
+  background-image: linear-gradient(to right, rgba(174, 203, 71, .1), rgba(255, 255, 0, .4), rgba(207, 232, 21, 0.1));
+  animation-name: points-12;
+  animation-duration: .4s;
+  animation-direction: alternate-reverse;
+  animation-timing-function: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  animation-iteration-count: 5;
+  opacity: 0;
+}
+
+@keyframes points-12 {
+  0% {
+    right: 0px;
+    opacity: 1;
+  }
+
+  100% {
+    right: calc(100% - 120px);
+    opacity: 1;
+  }
+}
+
+#root>.main>.scoreboard>div>img {
+  width: 65px;
+  height: 43px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+#root>.main>.scoreboard>div>.country-name {
+  color: white;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: .9rem;
+  z-index: 2;
+}
+
+#root>.main>.scoreboard>div>.total {
+  width: 80px;
+  height: 43px;
+  background-image: linear-gradient(to left, rgb(30, 3, 62), rgb(92, 25, 174));
+  position: absolute;
+  right: 0;
+  text-align: right;
+  line-height: 43px;
+  color: white;
+  font-weight: 900;
+  padding-right: 15px;
+}
+
+#root>.main>.scoreboard>div>.givin {
+  width: 65px;
+  height: 43px;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 43px;
+  font-size: 1.3rem;
+  color: white;
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  background-image: linear-gradient(to right, rgb(92, 25, 174), rgb(42, 145, 235), rgb(92, 25, 174));
+  display: none;
+}
+
+
+#root>.main>.juri-tele {
+  background-color: rgba(22, 86, 143, .7);
+  width: 38%;
+  height: 99%;
+}
+
+#root>.main>.juri-tele>video {
+  width: 100%;
+  height: 86%;
+}
+
+#root>.main>.juri-tele>div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background-color: yellow;
+  padding: 10px;
+  height: 13%;
+  justify-content: center;
+}
+
+#root>.main>.juri-tele>div>p {
+  display: flex;
+  gap: 5px;
+  color: rgb(25, 82, 174);
+  font-weight: 600;
+}
+
+#root>.main>.juri-tele>div>span {
+  color: rgb(25, 82, 174);
+  font-weight: 900;
+  font-size: 1.2rem;
+}
+
+
+.click {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 100000000000;
+}
+
+.click2 {
+  right: 42px;
+}
+
+.click3 {
+  right: 100px;
+}
+
+.click4 {
+  right: 150px;
+}
+
+.click5 {
+  right: 200px;
+}
