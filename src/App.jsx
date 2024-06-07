@@ -9,18 +9,35 @@ function App() {
   const [countOfJuri, setCountOfJuri] = useState(0);
   const [nameOfJuri, setNameOfJuri] = useState('Juri');
   const [juriCount, setJuriCount] = useState(0);
-  const [moveCount, setMoveCount] = useState(-1);
+  const [moveCount, setMoveCount] = useState(-2);
   const [givenPuan, setGivenPuan] = useState([]);
   const [getingCountry, setGetingCountry] = useState([]);
-  const [teleCount, setTeleCount] = useState(19);
+  const [teleCount, setTeleCount] = useState(0);
+  const [teleCountConst, setTeleCountConst] = useState(0);
+
+  const [video, setVideo] = useState('');
+
   const [mainBoxArrayTele, setMainBoxArrayTele] = useState([]);
   const [classOfBack, setClassOfBack] = useState('')
-
 
   const [allCountries, setAllCountries] = useState([]);
   const [finalists, setFinalists] = useState([]);
 
 
+  const colorOfName = [
+    {
+      video: 'src/videos/x.mp4',
+      color1: "red",
+      color2: "white",
+      color3: "red"
+    },
+    {
+      video: 'src/videos/x.mp4',
+      color1: "white",
+      color2: "blue",
+      color3: "red"
+    }
+  ]
 
   const givinPuans = document.getElementsByClassName('givin');
   const totalPuans = document.getElementsByClassName('total');
@@ -42,6 +59,9 @@ function App() {
     const arrayOfFinalists = (await axios.get('https://us-central1-api-tvef-vote.cloudfunctions.net/app/readTelePuans')).data;
     setFinalists(arrayOfFinalists);
   };
+
+
+
 
 
 
@@ -81,11 +101,22 @@ function App() {
       givenCountry1.remove();
       givenCountry2.remove();
     }, 3300)
+
+
+
+    givenCountry1.style.backgroundImage = `linear-gradient(45deg, ${colorOfName[Math.floor(moveCount / 2)].color1}, ${colorOfName[Math.floor(moveCount / 2)].color2}, ${colorOfName[Math.floor(moveCount / 2)].color3}, ${colorOfName[Math.floor(moveCount / 2)].color1}, ${colorOfName[Math.floor(moveCount / 2)].color2}, ${colorOfName[Math.floor(moveCount / 2)].color3}, ${colorOfName[Math.floor(moveCount / 2)].color1}, ${colorOfName[Math.floor(moveCount / 2)].color2}, ${colorOfName[Math.floor(moveCount / 2)].color3})`;
+
+    givenCountry2.style.backgroundImage = `linear-gradient(45deg, ${colorOfName[Math.floor(moveCount / 2)].color1}, ${colorOfName[Math.floor(moveCount / 2)].color2}, ${colorOfName[Math.floor(moveCount / 2)].color3}, ${colorOfName[Math.floor(moveCount / 2)].color1}, ${colorOfName[Math.floor(moveCount / 2)].color2}, ${colorOfName[Math.floor(moveCount / 2)].color3}, ${colorOfName[Math.floor(moveCount / 2)].color1}, ${colorOfName[Math.floor(moveCount / 2)].color2}, ${colorOfName[Math.floor(moveCount / 2)].color3})`;
+
+
+    setVideo("");
+
   }
 
 
 
   const addJuri = () => {
+    setVideo(colorOfName[Math.floor(moveCount / 2)].video);
     console.log(juri)
     setNameOfJuri(juri[juriCount].givinCountry);
     for (let i = 0; i < givinPuans.length; i++) {
@@ -131,12 +162,23 @@ function App() {
   }
 
   const moveBox = () => {
+    if (moveCount < 0) {
+      let t = 0;
+      scoreBoard.forEach((e) => {
+        if (e.result) {
+          t++;
+        }
+      })
+      console.log(t);
+      setTeleCountConst(t + 1);
+      setTeleCount(t + 1);
+    }
 
     moveFunc()
 
     moveElement();
 
-    if (moveCount < 26) {
+    if (moveCount < ((juri.length / 10) * 2)) {
 
       if (moveCount % 2 !== 0 && moveCount >= 0) {
         setTimeout(() => {
@@ -153,7 +195,7 @@ function App() {
       }
     }
 
-    if (moveCount >= 26) {
+    if (moveCount >= ((juri.length / 10) * 2)) {
       for (let i = 0; i < givinPuans.length; i++) {
         if (givinPuans[i].textContent != 0 && givinPuans[i].parentElement.style.backgroundColor !== 'rgb(30, 3, 62)') {
           document.getElementsByClassName('before-element')[i].style.width = "calc(100% - 140px)";
@@ -173,7 +215,6 @@ function App() {
     callData();
   }, [])
 
-
   let countryPuans = 0, arrayOfCountryPuans = [], arrayOfCountry = [];
 
   allCountries.forEach((f) => {
@@ -192,8 +233,8 @@ function App() {
 
 
   const tele = () => {
-
-    if (teleCount === 19) {
+    console.log(teleCount)
+    if (teleCount === teleCountConst) {
 
       moveFunc()
 
@@ -254,10 +295,11 @@ function App() {
 
 
   const moveElement = () => {
+    console.log(teleCountConst)
     mainBoxArray.reverse()
     let topCount1 = 0, topCount2 = 0;
     for (let i = 0; i < mainBoxArray.length; i++) {
-      if (i < 9) {
+      if (i < Math.ceil(teleCountConst / 2) - 1) {
         mainBoxArray[i].style.top = topCount1 + 'px';
         mainBoxArray[i].style.left = 0 + '%';
         topCount1 += 50;
@@ -311,11 +353,11 @@ function App() {
           }
         </div>
         <div className='juri-tele'>
-          <video src=""></video>
+          <video src={`${video}`} autoplay=""></video>
           <div>
             <p>
               <span>{countOfJuri}</span>
-              <span> of 40 Countries</span>
+              <span> of {(juri.length / 10)} Countries</span>
             </p>
             <span className='name-of-juri'>{nameOfJuri}</span>
           </div>
