@@ -28,6 +28,18 @@ function App() {
     {
       video: 'src/videos/x.mp4',
       color1: "red",
+      color2: "yellow",
+      color3: "green"
+    },
+    {
+      video: 'src/videos/x.mp4',
+      color1: "red",
+      color2: "white",
+      color3: "red"
+    },
+    {
+      video: 'src/videos/x.mp4',
+      color1: "red",
       color2: "white",
       color3: "red"
     },
@@ -36,6 +48,24 @@ function App() {
       color1: "white",
       color2: "blue",
       color3: "red"
+    },
+    {
+      video: 'src/videos/x.mp4',
+      color1: "red",
+      color2: "black",
+      color3: "orange"
+    },
+    {
+      video: 'src/videos/x.mp4',
+      color1: "yellow",
+      color2: "blue",
+      color3: "yellow"
+    },
+    {
+      video: 'src/videos/x.mp4',
+      color1: "white",
+      color2: "green",
+      color3: "white"
     }
   ]
 

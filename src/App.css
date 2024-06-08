@@ -344,7 +344,7 @@
 }
 
 #root>.main>.scoreboard {
-  width: 62%;
+  padding: 0;
   position: relative;
   width: 100%;
 }
